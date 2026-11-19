@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>JavaScript For Methods, Loops and Switch</h2>
+  <p id="food-demo"></p>
+  <p id="month-demo"></p>
+
+  <script>
+    var food = ["Jollof rice", "Egusi and Eba", "Fried rice", "Pounded yam and Efo Riro", "Beans and Dodo"];
+    var text = "";
+    var i;
+    for (i = 0; i < food.length; i++) {
+      text += food[i] + "<br>";
+    }
+    document.getElementById("food-demo").innerHTML = text;
+
+    var month;
+    switch (new Date().getMonth()) {
+      case 0: month = "January"; break;
+      case 1: month = "February"; break;
+      case 2: month = "March"; break;
+      case 3: month = "April"; break;
+      case 4: month = "May"; break;
+      case 5: month = "June"; break;
+      case 6: month = "July"; break;
+      case 7: month = "August"; break;
+      case 8: month = "September"; break;
+      case 9: month = "October"; break;
+      case 10: month = "November"; break;
+      case 11: month = "December"; break;
+    }
+    document.getElementById("month-demo").innerHTML = "This month is " + month;
+
+    var str = "Jesus";
+    document.write(str.toUpperCase());
+    document.write("<br>");
+    document.write(str.startsWith("j"));
+    document.write("<br>");
+    document.write(str.endsWith("s"));
+    document.write("<br>");
+
+    var str1 = "I ❤️ Sports";
+    var patt = new RegExp("❤️");
+    var res = patt.test(str1);
+    document.write(res);
+  </script>
+</body>
+</html>
